@@ -1,8 +1,17 @@
 export default defineNuxtConfig({
-	compatibilityDate: '2024-04-03',
-	devtools: { enabled: true },
+	app: {
+		head: {
+			title: 'Boomin Kim',
+			charset: 'utf-8',
+		},
+	},
+	devtools: {
+		enabled: false,
+	},
 	modules: [// Simple usage
-		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui'],
+		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui',
+	],
+	ssr: false,
 	eslint: {
 		checker: true,
 		config: {

@@ -24,3 +24,6 @@ logs
 !.env.example
 
 .backups/*
+
+# eslint
+.eslintcache
