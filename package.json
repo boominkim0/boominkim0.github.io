@@ -1,12 +1,13 @@
 {
   "name": "boominkim0.github.io",
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.2",
@@ -15,14 +16,10 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
+    "@nuxt/eslint": "^0.5.7",
     "eslint": "^9.10.0",
-    "eslint-config-eslint": "^11.0.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-define-config": "^2.1.0",
-    "eslint-plugin-vue": "^9.28.0",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "typescript": "5.5.4",
+    "vite-plugin-eslint2": "^4.4.1"
   }
 }
