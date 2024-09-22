@@ -1,3 +1,3 @@
 <template>
-	<ContentDoc path="/projects/himke" />
+	<MatrixCanvas />
 </template>

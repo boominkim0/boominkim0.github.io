@@ -5,13 +5,17 @@ export default defineNuxtConfig({
 			charset: 'utf-8',
 		},
 	},
+
 	devtools: {
 		enabled: false,
 	},
+
 	modules: [// Simple usage
 		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui',
 	],
+
 	ssr: false,
+
 	eslint: {
 		checker: true,
 		config: {
@@ -22,4 +26,6 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+
+	compatibilityDate: '2024-09-22',
 });
