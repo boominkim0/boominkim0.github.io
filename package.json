@@ -7,13 +7,15 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "deploy": "nuxt build && gh-pages -d dist"
   },
   "engines": {
     "node": ">=20.0.0"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.2",
+    "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.4",
     "nuxt": "^3.13.0",
     "vue": "latest",

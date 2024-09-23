@@ -16,6 +16,12 @@ export default defineNuxtConfig({
 
 	ssr: false,
 
+	routeRules: {
+		'/': {
+			prerender: true,
+		},
+	},
+
 	eslint: {
 		checker: true,
 		config: {

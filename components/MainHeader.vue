@@ -34,10 +34,10 @@ const links = computed(() => [
 	// 	},
 	// 	badge: 100,
 	// },
-	{
-		label: 'Projects',
-		to: '/projects',
-	},
+	// {
+	// 	label: 'Projects',
+	// 	to: '/projects',
+	// },
 	// {
 	// 	label: 'Installation',
 	// 	icon: 'i-heroicons-home',
