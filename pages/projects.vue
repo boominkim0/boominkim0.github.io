@@ -1,30 +1,20 @@
 <template>
-	<div>
-		<h5>
-			프로젝트 목록
-		</h5>
-		<ul>
-			<li
-				v-for="item in list"
-				:key="item.id"
-			>
-				<router-link :to="item.id">
-					{{ item.title }}
-				</router-link>
-			</li>
-		</ul>
+	<div class="my-5">
+		<UVerticalNavigation
+			:links="links"
+		/>
 	</div>
 </template>
 
 <script setup lang="ts">
-const list = [
+const links = [
 	{
-		id: '/project/himke',
-		title: '힘캐',
+		label: '🏋🏻‍♂️ 힘캐',
+		to: '/project/himke',
 	},
 	{
-		id: '/project/logifestival',
-		title: '로지페스티벌',
+		label: '🎉 로지페스티벌',
+		to: '/project/logifestival',
 	},
 ];
 </script>

@@ -21,7 +21,7 @@
 					Boomin Kim
 				</h1>
 
-				<!-- <h2
+				<h2
 					class="
 						text-2xl
 						text-center
@@ -29,9 +29,8 @@
 						dark:text-gray-400
 					"
 				>
-					Software Engineer 입니다.
-					항상 일을 쉽게 하려고 합니다.
-				</h2> -->
+					만드는걸 좋아하는 개발자 입니다.
+				</h2>
 			</div>
 		</div>
 	</div>

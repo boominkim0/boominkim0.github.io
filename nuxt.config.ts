@@ -11,16 +11,7 @@ export default defineNuxtConfig({
 	},
 
 	modules: [// Simple usage
-		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui',
-	],
-
-	ssr: false,
-
-	routeRules: {
-		'/': {
-			prerender: true,
-		},
-	},
+		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxthub/core'],
 
 	eslint: {
 		checker: true,

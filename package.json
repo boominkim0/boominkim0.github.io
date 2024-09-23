@@ -1,5 +1,6 @@
 {
   "name": "boominkim0.github.io",
+  "url": "https://github-io.nuxt.dev",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -8,7 +9,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "deploy": "nuxt build && gh-pages -d dist"
+    "deploy": "npx nuxthub deploy"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -17,6 +18,7 @@
     "@nuxt/content": "^2.13.2",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.4",
+    "@nuxthub/core": "^0.7.19",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
@@ -24,7 +26,6 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.5.7",
     "eslint": "^9.10.0",
-    "gh-pages": "^6.1.1",
     "typescript": "5.5.4",
     "vite-plugin-eslint2": "^4.4.1"
   }
