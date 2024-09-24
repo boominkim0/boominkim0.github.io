@@ -1,11 +1,14 @@
 <template>
-	<div class="my-5">
+	<NuxtLayout class="pb-5">
 		<UBreadcrumb
 			:links="links"
 			class="mb-3"
 		/>
-		<ContentDoc :path="`/projects/${route.params.id}`" />
-	</div>
+		<ContentDoc
+			:path="`/projects/${route.params.id}`"
+			class="markdown-body bg-transparent mb-5"
+		/>
+	</NuxtLayout>
 </template>
 
 <script setup="setup" lang="ts">

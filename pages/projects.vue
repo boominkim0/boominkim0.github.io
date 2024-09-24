@@ -9,6 +9,11 @@
 </template>
 
 <script setup lang="ts">
+// head.title
+useHead({
+	title: 'Projects',
+});
+
 const links = [
 	{
 		label: '🏋🏻‍♂️ 힘캐',

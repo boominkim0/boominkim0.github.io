@@ -1,6 +1,5 @@
 <template>
 	<NuxtLayout
-		ref="layout"
 		class="flex flex-col overflow-hidden"
 		:style="{ height }"
 	>
@@ -43,6 +42,10 @@
 <script setup lang="ts">
 const { isMobile } = useDevice();
 const height = isMobile ? 'calc(100vh - 100px)' : '100vh';
+
+useHead({
+	title: 'Boomin Kim',
+});
 
 if (isMobile) {
 	onMounted(() => {
