@@ -51,13 +51,13 @@ export class MatrixCanvas {
 		this.context.canvas.addEventListener('touchend', this.mouseup.bind(this));
 	}
 
-	static getRandomCharacter() {
+	public static getRandomCharacter() {
 		const characters = '0123456789BoominKim';
 		const randomIndex = Math.floor(Math.random() * characters.length);
 		return characters[randomIndex];
 	}
 
-	getXY(event: MouseEvent | TouchEvent) {
+	private getXY(event: MouseEvent | TouchEvent) {
 		let x = 0;
 		let y = 0;
 
@@ -75,32 +75,32 @@ export class MatrixCanvas {
 		return { x, y };
 	}
 
-	darkMode() {
+	public darkMode() {
 		// this.backgroundColour = 'black';
 		this.textColour = 'rgb(156, 163, 175)';
 	}
 
-	lightMode() {
+	public lightMode() {
 		// this.backgroundColour = 'white';
 		this.textColour = 'rgb(107, 114, 128)';
 	}
 
-	mousedown() {
+	private mousedown() {
 		this.isBoom = true;
 	}
 
-	mouseup() {
+	private mouseup() {
 		this.isBoom = false;
 		this.backPosition();
 	}
 
-	backPosition() {
+	private backPosition() {
 		this.charList.forEach((char) => {
 			char.startBackPosition();
 		});
 	}
 
-	boom(event: MouseEvent | TouchEvent) {
+	private boom(event: MouseEvent | TouchEvent) {
 		if (!this.isBoom) return;
 
 		const { x, y } = this.getXY(event);
@@ -117,7 +117,7 @@ export class MatrixCanvas {
 		});
 	}
 
-	draw() {
+	public draw() {
 		// clear
 		this.context.clearRect(0, 0, this.context.canvas.width, this.context.canvas.height);
 
@@ -125,19 +125,22 @@ export class MatrixCanvas {
 			char.draw();
 			char.update();
 
-			if (Math.random() > 0.995) {
+			if (
+				char.anmationType === 'none'
+				&& Math.random() > 0.995
+			) {
 				char.anmationType = 'fadeout';
 			}
 		});
 	}
 
-	clear() {
+	public clear() {
 		this.context.fillStyle = this.backgroundColour;
 		this.context.fillRect(0, 0, this.context.canvas.width, this.context.canvas.height);
 		this.charList = [];
 	}
 
-	resize() {
+	public resize() {
 		const column = Math.floor(this.context.canvas.width / 20);
 		const row = Math.floor(this.context.canvas.height / 20);
 

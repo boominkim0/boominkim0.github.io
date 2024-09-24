@@ -1,6 +1,9 @@
 import { MatrixCanvas } from './index';
 
+let id = 0;
+
 export default class Char {
+	id: number = id++;
 	char: string;
 	initX: number;
 	initY: number;
@@ -71,7 +74,6 @@ export default class Char {
 		}
 		else if (this.anmationType === 'backPosition') {
 			this.throw(this.angle, this.speed);
-
 			// initX, initY값에 도달하면 애니메이션 종료
 			if (
 				Math.abs(this.initX - this.x) < 1

@@ -1,5 +1,9 @@
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
+	<NuxtPage />
 </template>
+
+<style>
+ * {
+	word-break: keep-all;
+ }
+</style>

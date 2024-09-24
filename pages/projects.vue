@@ -1,9 +1,11 @@
 <template>
-	<div class="my-5">
-		<UVerticalNavigation
-			:links="links"
-		/>
-	</div>
+	<NuxtLayout>
+		<div class="my-5">
+			<UVerticalNavigation
+				:links="links"
+			/>
+		</div>
+	</NuxtLayout>
 </template>
 
 <script setup lang="ts">

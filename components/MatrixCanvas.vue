@@ -1,8 +1,7 @@
 <template>
 	<canvas
 		id="canvas"
-		class="w-full"
-		style="height: calc(100vh - 100px);"
+		class="w-full h-full"
 	/>
 </template>
 

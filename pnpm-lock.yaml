@@ -17,6 +17,9 @@ dependencies:
   '@nuxthub/core':
     specifier: ^0.7.19
     version: 0.7.19(vite@5.4.5)
+  '@nuxtjs/device':
+    specifier: ^3.2.4
+    version: 3.2.4
   nuxt:
     specifier: ^3.13.0
     version: 3.13.1(eslint@9.10.0)(typescript@5.5.4)(vite@5.4.5)
@@ -1940,6 +1943,12 @@ packages:
       - rollup
       - supports-color
       - webpack-sources
+    dev: false
+
+  /@nuxtjs/device@3.2.4:
+    resolution: {integrity: sha512-jIvN6QeodBNrUrL/1FCHk4bebsiLsGHlJd8c/m2ksLrGY4IZ0npA8IYhDTdYV92epGxoe8+3iZOzCjav+6TshQ==}
+    dependencies:
+      defu: 6.1.4
     dev: false
 
   /@nuxtjs/mdc@0.8.3:

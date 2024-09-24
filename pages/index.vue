@@ -1,6 +1,10 @@
 <template>
-	<div>
-		<div class="w-full my-5 relative">
+	<NuxtLayout
+		ref="layout"
+		class="flex flex-col overflow-hidden"
+		:style="{ height }"
+	>
+		<div class="w-full my-5 relative flex-1">
 			<MatrixCanvas />
 
 			<div
@@ -33,8 +37,23 @@
 				</h2>
 			</div>
 		</div>
-	</div>
+	</NuxtLayout>
 </template>
+
+<script setup lang="ts">
+const { isMobile } = useDevice();
+const height = isMobile ? 'calc(100vh - 100px)' : '100vh';
+
+if (isMobile) {
+	onMounted(() => {
+		document.body.style.overflow = 'hidden';
+	});
+
+	onUnmounted(() => {
+		document.body.style.overflow = '';
+	});
+}
+</script>
 
 <style scoped>
 .blur-box {

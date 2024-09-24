@@ -19,6 +19,7 @@
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.4",
     "@nuxthub/core": "^0.7.19",
+    "@nuxtjs/device": "^3.2.4",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
