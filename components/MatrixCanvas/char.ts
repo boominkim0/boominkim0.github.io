@@ -1,4 +1,4 @@
-import { MatrixCanvas } from './index';
+import { MatrixCanvas } from './main';
 
 let id = 0;
 

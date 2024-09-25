@@ -24,4 +24,9 @@ const links = [
 		to: '/project/logifestival',
 	},
 ];
+
+defineOgImageComponent('Default', {
+	title: 'Boomin Kim',
+	description: `제가 만든 프로젝트들을 소개합니다. 🚀(${links.length}개)`,
+});
 </script>

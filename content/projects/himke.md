@@ -1,8 +1,22 @@
+---
+path: "/content/project/himke"
+ogImage:
+  component: Default
+  props:
+    title: 힘캐 - 🏋🏻‍♂️ iOS 운동일지 앱
+    description: 서비스 종료 이유와 개발과정을 소개합니다.
+sitemap:
+  loc: /content/project/himke
+  lastmod: 2024-09-25
+  changefreq: monthly
+  priority: 0.8
+---
+
 # 힘캐 - 🏋🏻‍♂️ iOS 운동일지 앱
 <img src="/content/himke/appstore-open.png" alt="앱스토어 출시 캡쳐 화면" class="w-52"/>
 
 ## 1. 개요
-**힘캐**는 벌크업(근력증가)를 위한 운동일지 어플리케이션입니다.
+**힘캐**는 벌크업(근력증가)을 위한 운동일지 어플리케이션입니다.
 
 * 스트롱리프트5x5, GVT10x10 두 가지 운동 프로그램을 제공
 * 운동일지 작성, 조회

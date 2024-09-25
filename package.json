@@ -1,6 +1,6 @@
 {
-  "name": "boominkim0.github.io",
-  "url": "https://github-io.nuxt.dev",
+  "name": "boomin.pages.dev",
+  "url": "https://boomin.pages.dev",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -20,7 +20,10 @@
     "@nuxt/ui": "^2.18.4",
     "@nuxthub/core": "^0.7.19",
     "@nuxtjs/device": "^3.2.4",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/sitemap": "^6.1.0",
     "nuxt": "^3.13.0",
+    "nuxt-og-image": "^3.0.2",
     "vue": "latest",
     "vue-router": "latest"
   },

@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { MatrixCanvas } from './MatrixCanvas/index';
+import { MatrixCanvas } from './MatrixCanvas/main';
 
 const colorMode = useColorMode();
 

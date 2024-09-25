@@ -43,6 +43,11 @@
 const { isMobile } = useDevice();
 const height = isMobile ? 'calc(100vh - 100px)' : '100vh';
 
+defineOgImageComponent('Default', {
+	title: 'Boomin Kim',
+	description: '💻 만드는걸 좋아하는 개발자 입니다.',
+});
+
 useHead({
 	title: 'Boomin Kim',
 });

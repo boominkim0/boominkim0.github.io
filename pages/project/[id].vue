@@ -13,6 +13,8 @@
 
 <script setup="setup" lang="ts">
 const route = useRoute();
+const page = await useAsyncData(`docs-${route.path}`, () => queryContent(route.path).findOne());
+useContentHead(page);
 
 const links = [
 	{
