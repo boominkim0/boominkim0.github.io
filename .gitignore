@@ -27,3 +27,5 @@ logs
 
 # eslint
 .eslintcache
+
+.wrangler

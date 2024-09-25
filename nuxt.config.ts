@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 		families: {
 			'Nanum Gothic': true,
 		},
+		download: false,
 	},
 
 	app: {
@@ -62,5 +63,5 @@ export default defineNuxtConfig({
 		},
 	},
 
-	compatibilityDate: '2024-09-22',
+	compatibilityDate: '2024-09-25',
 });
