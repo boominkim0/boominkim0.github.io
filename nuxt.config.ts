@@ -27,6 +27,16 @@ export default defineNuxtConfig({
 		head: {
 			title: 'Boomin Kim',
 			charset: 'utf-8',
+			script: [
+				{ async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-LWKBCV14H3' },
+				{ innerHTML: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+
+						gtag('config', 'G-LWKBCV14H3');
+					` },
+			],
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 				{ rel: 'stylesheet', href: '/lib/github-markdown.css' },
