@@ -21,7 +21,7 @@
 				</div>
 
 				<p class="text-2xl pb-10 px-20 font-bold mb-0">
-					boomin.pages.dev
+					boominkim0.github.io
 				</p>
 			</div>
 		</div>

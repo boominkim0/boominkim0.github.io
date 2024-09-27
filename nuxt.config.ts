@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
 	site: {
 		// production URL
-		url: 'https://boomin.pages.dev',
+		url: 'https://boominkim0.github.io',
 		name: 'Boomin Kim',
 	},
 	content: {
@@ -25,6 +25,7 @@ export default defineNuxtConfig({
 	},
 
 	app: {
+		// cdnURL: './',
 		head: {
 			title: 'Boomin Kim',
 			charset: 'utf-8',
@@ -50,7 +51,9 @@ export default defineNuxtConfig({
 	},
 
 	modules: [// Simple usage
-		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxthub/core', '@nuxtjs/device', 'nuxt-og-image', '@nuxtjs/google-fonts', '@nuxtjs/sitemap'],
+		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui',
+		'@nuxtjs/device', 'nuxt-og-image', '@nuxtjs/google-fonts', '@nuxtjs/sitemap',
+	],
 
 	eslint: {
 		checker: true,
@@ -60,6 +63,13 @@ export default defineNuxtConfig({
 				semi: true,
 				// ...
 			},
+		},
+	},
+
+	routeRules: {
+		'/api/**': {
+			// 랜더링하지 않기
+			prerender: false,
 		},
 	},
 
