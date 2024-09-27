@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+# 개요
+안녕하세요. 김부민 입니다.
+제가 진행한 프로젝트와 생각을 정리하는 공간입니다.
+* 페이지 링크: [boominkim0.github.io](https://boominkim0.github.io)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 개발
+* Nuxt3로 개발했습니다.
+* SSG(Static Site Generation)로 빌드해서 Github Pages에 호스팅하고 있습니다.
 
-## Setup
+## 시작
+* install
+    ```bash
+    npm install
+    ```
+* dev
+    ```bash
+    npm run dev
+    ```
+* build
+    ```bash
+    npm run build
+    ```
+* deploy
+    ```bash
+    npm run deploy
+    ```
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
