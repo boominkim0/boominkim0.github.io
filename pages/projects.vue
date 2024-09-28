@@ -3,7 +3,14 @@
 		<div class="my-5">
 			<UVerticalNavigation
 				:links="links"
-			/>
+			>
+				<!-- <template #badge="{ link }">
+					<div class="flex-1 flex justify-between relative truncate">
+						<div>{{ link.badge }}</div>
+						<div>{{ link.time }}</div>
+					</div>
+				</template> -->
+			</UVerticalNavigation>
 		</div>
 	</NuxtLayout>
 </template>
@@ -16,12 +23,14 @@ useHead({
 
 const links = [
 	{
-		label: '🏋🏻‍♂️ 힘캐',
+		label: '🏋🏻‍♂️ 힘캐 - 운동일지 앱',
+		badge: '2024.07',
 		to: '/project/himke',
 	},
 	{
-		label: '🎉 로지페스티벌',
-		to: '/project/logifestival',
+		label: '🎊 회사 체육대회 웹앱',
+		badge: '2023.11',
+		to: '/project/company-festival',
 	},
 ];
 

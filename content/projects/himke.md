@@ -39,7 +39,7 @@ sitemap:
 - **개발기간**: 2개월
 - **개발인원**: 1명
 - **개발환경**: MacOS, VSCode, Xcode
-- **사용기술**: Flutter, Dart, ChatGPT, Copilot
+- **사용기술**: Flutter, Dart, Firebase-Analytics, ChatGPT, Copilot
 - **상태관리**: riverpod
 - **디자인패턴**: DDD(Domain Driven Design)
 - **서버**: 사용하지 않음
@@ -47,7 +47,7 @@ sitemap:
     * [sqflite](https://pub.dev/packages/sqflite) 패키지 사용
 - **통계**: Firebase Analytics 사용
 
-### 2.2 개발과정
+### 2.1 개발과정
 * Flutter로 iOS 앱 개발.
 * testflight를 통해 사전 테스트 진행. 
 * 1일 1회 이상 업데이트.
