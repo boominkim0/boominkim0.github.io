@@ -36,12 +36,29 @@
 				</h2>
 			</div>
 		</div>
+
+		<div
+			class="
+				fixed
+				right-0
+				bottom-0
+				text-center
+				text-gray-200
+				dark:text-gray-700
+				p-3
+			"
+		>
+			v{{ version }}
+		</div>
 	</NuxtLayout>
 </template>
 
 <script setup lang="ts">
+import packageInfo from '../package.json';
+
 const { isMobile } = useDevice();
 const height = isMobile ? 'calc(100vh - 100px)' : '100vh';
+const version = packageInfo.version;
 
 defineOgImageComponent('Default', {
 	title: 'Boomin Kim',
