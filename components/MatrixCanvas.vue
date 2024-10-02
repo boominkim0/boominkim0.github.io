@@ -10,7 +10,7 @@ import { MatrixCanvas } from './MatrixCanvas/main';
 
 const colorMode = useColorMode();
 
-const resizeTimeout: number | null = null;
+let resizeTimeout: number | null = null;
 let matrixCanvas: MatrixCanvas | null = null;
 onMounted(() => {
 	const canvas = document.getElementById('canvas') as HTMLCanvasElement;
@@ -34,7 +34,7 @@ onMounted(() => {
 		// canvas clear
 		matrixCanvas?.clear();
 
-		setTimeout(() => {
+		resizeTimeout = setTimeout(() => {
 			canvas.width = canvas.clientWidth * dpr;
 			canvas.height = canvas.clientHeight * dpr;
 			context.scale(dpr, dpr);

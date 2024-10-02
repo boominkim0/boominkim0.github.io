@@ -15,6 +15,7 @@
 				<h1
 					class="
 						text-4xl
+						max-sm:text-xl
 						font-bold
 						text-center
 						text-gray-800
@@ -30,6 +31,7 @@
 						text-center
 						text-gray-600
 						dark:text-gray-400
+						max-sm:text-lg
 					"
 				>
 					만드는걸 좋아하는 개발자 입니다.
