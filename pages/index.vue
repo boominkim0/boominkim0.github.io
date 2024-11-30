@@ -69,6 +69,10 @@ defineOgImageComponent('Default', {
 
 useHead({
 	title: 'Boomin Kim',
+	link: [
+		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		{ rel: 'stylesheet', href: '/lib/github-markdown.css' },
+	],
 });
 
 if (isMobile) {

@@ -29,15 +29,18 @@ useSeoMeta({
 });
 
 function load() {
+	document.documentElement.classList.remove('dark');
 	// pc: 360, mobile: 240
 	const mapWidth = window.innerWidth > 768 ? '360' : '240';
 	const mapHeight = window.innerWidth > 768 ? '240' : '160';
 
-	new daum.roughmap.Lander({
-		timestamp: '1732973548552',
-		key: '2mdri',
-		mapWidth: mapWidth,
-		mapHeight: mapHeight,
-	}).render();
+	if (window.daum) {
+		new window.daum.roughmap.Lander({
+			timestamp: '1732973548552',
+			key: '2mdri',
+			mapWidth: mapWidth,
+			mapHeight: mapHeight,
+		}).render();
+	}
 }
 </script>

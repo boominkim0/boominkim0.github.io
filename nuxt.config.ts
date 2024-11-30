@@ -7,9 +7,6 @@ export default defineNuxtConfig({
 	content: {
 		documentDriven: true,
 	},
-	colorMode: {
-		fallback: 'light', // will render in light mode
-	},
 	ogImage: {
 		fonts: [
 			'Nanum+Gothic',
@@ -38,10 +35,6 @@ export default defineNuxtConfig({
 
 					gtag('config', 'G-LWKBCV14H3');
 					` },
-			],
-			link: [
-				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-				{ rel: 'stylesheet', href: '/lib/github-markdown.css' },
 			],
 		},
 	},

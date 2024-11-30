@@ -19,6 +19,10 @@
 // head.title
 useHead({
 	title: 'Projects',
+	link: [
+		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		{ rel: 'stylesheet', href: '/lib/github-markdown.css' },
+	],
 });
 
 const links = [

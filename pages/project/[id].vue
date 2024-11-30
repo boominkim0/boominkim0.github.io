@@ -15,6 +15,12 @@
 const route = useRoute();
 const page = await useAsyncData(`docs-${route.path}`, () => queryContent(route.path).findOne());
 useContentHead(page);
+useHead({
+	link: [
+		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		{ rel: 'stylesheet', href: '/lib/github-markdown.css' },
+	],
+});
 
 const links = [
 	{
