@@ -8,7 +8,6 @@ export default defineNuxtConfig({
 		documentDriven: true,
 	},
 	colorMode: {
-		preference: 'system',
 		fallback: 'light', // will render in light mode
 	},
 	ogImage: {
@@ -32,11 +31,11 @@ export default defineNuxtConfig({
 			script: [
 				{ async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-LWKBCV14H3' },
 				{ innerHTML: `
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
 
-						gtag('config', 'G-LWKBCV14H3');
+					gtag('config', 'G-LWKBCV14H3');
 					` },
 			],
 			link: [
@@ -51,9 +50,7 @@ export default defineNuxtConfig({
 	},
 
 	modules: [// Simple usage
-		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui',
-		'@nuxtjs/device', 'nuxt-og-image', '@nuxtjs/google-fonts', '@nuxtjs/sitemap',
-	],
+		'@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxtjs/device', 'nuxt-og-image', '@nuxtjs/google-fonts', '@nuxtjs/sitemap', '@nuxt/fonts'],
 
 	eslint: {
 		checker: true,
