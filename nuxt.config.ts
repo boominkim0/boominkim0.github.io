@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 	googleFonts: {
 		families: {
 			'Nanum Gothic': true,
+			'Nanum Myeongjo': true,
 		},
 		download: false,
 	},

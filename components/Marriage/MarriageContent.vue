@@ -1,5 +1,18 @@
 <template>
 	<main>
+		<!-- <UHorizontalNavigation
+			:links="[
+				[],
+				[{
+					label: '한국어',
+					to: '/marriage/ko',
+				}, {
+					label: '中文',
+					to: '/marriage/zh',
+				}],
+			]"
+			class="border-b border-gray-200 dark:border-gray-800"
+		/> -->
 		<UContainer class="p-5">
 			<div class="text-center my-5">
 				<h1 class="text-2xl mb-1">
@@ -37,14 +50,6 @@
 					서울시 동대문구 망우로61 <br>
 					벨라루체웨딩홀 서울점 7층 플로체홀
 				</p>
-
-			<!-- <div class="h-16" /> -->
-
-			<!-- <img
-				src="/wedding/calender.png"
-				class="w-full mb-5"
-				draggable="false"
-			> -->
 			</div>
 
 			<div class="h-32" />
@@ -85,14 +90,6 @@
 				<p class="mb-5">
 					<b>박홍권 · 홍정희</b>의 장녀 <b>박리평</b>
 				</p>
-
-			<!-- <UButton
-				label="연락하기"
-				icon="i-heroicons-phone"
-				color="pink"
-				variant="outline"
-				@click="isShowTelModal = true"
-			/> -->
 			</div>
 
 			<div class="h-32" />
@@ -346,6 +343,8 @@
 
 <script setup>
 const toast = useToast();
+const router = useRouter();
+const emits = defineEmits(['load']);
 const weddingPictures = [
 	// '/wedding/snap-1.JPG',
 	'/wedding/snap-2.JPG',
@@ -368,8 +367,6 @@ const weddingPictures = [
 	'/wedding/snap-19.JPG',
 ];
 
-// const isShowTelModal = ref(false);
-
 // 남은 시간
 const weddingDate = new Date('2025-04-20T12:30:00');
 const isOverTime = ref(false);
@@ -379,32 +376,8 @@ const hours = ref(0);
 const minutes = ref(0);
 const seconds = ref(0);
 const isShowFullImageModal = ref(false);
-const fullImage = ref(null);
 
 let timer = null;
-
-useHead({
-	title: '4월 20일 김부민 ❤️ 박리평 결혼합니다.',
-	link: [
-		{
-			rel: 'icon',
-			type: 'image/x-icon',
-			href: '/favicon-wedding.ico',
-		},
-	],
-	script: [
-		{
-			src: 'https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js',
-			type: 'text/javascript',
-		},
-	],
-});
-
-useSeoMeta({
-	ogImage: '/wedding/snap-2.JPG',
-	ogTitle: '4월 20일 김부민 ❤️ 박리평 결혼합니다.',
-	ogDescription: '벛꽃 만개한 4월 봄날에 믿음과 사랑 안에서 새로운 시작을 준비합니다. 모든 날, 모든 순간을 아름답게 만들어가고 이끌어주고, 응원해 주는 서로가 되겠습니다.',
-});
 
 onMounted(() => {
 	timer = setInterval(() => {
@@ -427,16 +400,7 @@ onMounted(() => {
 		minutes.value = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 		seconds.value = Math.floor((diff % (1000 * 60)) / 1000);
 	}, 1000);
-
-	// pc: 360, mobile: 240
-	const mapWidth = window.innerWidth > 768 ? '360' : '240';
-	const mapHeight = window.innerWidth > 768 ? '240' : '160';
-	new daum.roughmap.Lander({
-		timestamp: '1732973548552',
-		key: '2mdri',
-		mapWidth: mapWidth,
-		mapHeight: mapHeight,
-	}).render();
+	emits('load');
 });
 
 onUnmounted(() => {
@@ -455,6 +419,6 @@ function copyToClipboard(text) {
 
 <style scoped>
 * {
-    font-family: FigTree, "Pretendard Variable", "IBM Plex Sans JP";
+    font-family: "Nanum Myeongjo", serif;
 }
 </style>
