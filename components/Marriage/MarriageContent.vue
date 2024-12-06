@@ -102,12 +102,12 @@
 					<button
 						v-for="(picture, index) in weddingPictures"
 						:key="index"
-						class="hover:opacity-80"
+						class="hover:opacity-80 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden"
 						@click="fullImage = picture; isShowFullImageModal = true"
 					>
 						<img
 							:src="picture"
-							class="w-full"
+							class="w-full h-full object-cover"
 							draggable="false"
 						>
 					</button>
@@ -310,30 +310,39 @@
 							@click="isShowFullImageModal = false"
 						/>
 					</div>
-					<div class="flex justify-center w-full items-center gap-3 px-5">
-						<!-- 이전버튼 -->
-						<UButton
-							v-if="weddingPictures.indexOf(fullImage) > 0"
-							color="gray"
-							icon="i-heroicons-chevron-left"
-							class="rounded-full"
-							@click="fullImage = weddingPictures[weddingPictures.indexOf(fullImage) - 1]"
-						/>
+				</template>
+				<img
+					:src="fullImage"
+					class="w-full"
+					draggable="false"
+				>
 
-						<img
-							:src="fullImage"
-							class="w-full"
-							draggable="false"
+				<template #footer>
+					<!-- 3열로 나열 -->
+					<div class="grid grid-cols-6 gap-2">
+						<button
+							v-for="(picture, index) in weddingPictures"
+							:key="`picture-${index}`"
+							class="hover:opacity-80 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden"
+							@click="changeFullImage(picture)"
 						>
-
-						<!-- 다음버튼 -->
-						<UButton
-							v-if="weddingPictures.indexOf(fullImage) < weddingPictures.length - 1"
-							color="gray"
-							icon="i-heroicons-chevron-right"
-							class="rounded-full"
-							@click="fullImage = weddingPictures[weddingPictures.indexOf(fullImage) + 1]"
-						/>
+							<img
+								:src="picture"
+								class="w-full h-full object-cover"
+								:class="{ 'border-5 border-gray-500': picture === fullImage }"
+								draggable="false"
+							>
+							<!-- 선택된 아이콘 표시 -->
+							<UIcon
+								v-if="picture === fullImage"
+								name="i-heroicons-check-circle-solid"
+								class="w-5 h-5
+								absolute top-0 right-0
+								m-auto
+								bg-primary-500 text-white
+								"
+							/>
+						</button>
 					</div>
 				</template>
 			</UCard>
@@ -375,6 +384,7 @@ const days = ref(0);
 const hours = ref(0);
 const minutes = ref(0);
 const seconds = ref(0);
+const fullImage = ref(weddingPictures[0]);
 const isShowFullImageModal = ref(false);
 
 let timer = null;
@@ -415,10 +425,20 @@ function copyToClipboard(text) {
 		description: text,
 	});
 }
+function changeFullImage(picture) {
+	try {
+		console.log('changeFullImage', { picture });
+		fullImage.value = picture;
+		isShowFullImageModal.value = true;
+	}
+	catch (error) {
+		console.error('Error changing full image:', error);
+	}
+}
 </script>
 
 <style scoped>
-* {
-    font-family: "Nanum Myeongjo", serif;
-}
+/* * {
+    font-family: "Nanum Myeongjo", serif; */
+/* } */
 </style>
