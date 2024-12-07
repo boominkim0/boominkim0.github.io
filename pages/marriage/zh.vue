@@ -13,7 +13,14 @@
 				</p>
 			</div>
 
-			<UCarousel
+			<video
+				class="w-full bg-black mb-5"
+				src="/wedding/wedding.mp4"
+				controls
+				poster="/wedding/snap-12.JPG"
+			/>
+
+			<!-- <UCarousel
 				v-slot="{ item }"
 				:items="weddingPictures"
 				:ui="{ item: 'basis-full md:basis-1/2 lg:basis-1/3' }"
@@ -26,7 +33,7 @@
 					class="w-full"
 					draggable="false"
 				>
-			</UCarousel>
+			</UCarousel> -->
 			<div class="w-full max-w-96 mx-auto text-center">
 				<p class="text-2xl mb-5">
 					金富民 · 朴丽平

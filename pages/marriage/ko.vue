@@ -13,7 +13,14 @@
 				</p>
 			</div>
 
-			<UCarousel
+			<video
+				class="w-full bg-black mb-5"
+				src="/wedding/wedding.mp4"
+				controls
+				poster="/wedding/snap-12.JPG"
+			/>
+
+			<!-- <UCarousel
 				v-slot="{ item }"
 				:items="weddingPictures"
 				:ui="{ item: 'basis-full md:basis-1/2 lg:basis-1/3' }"
@@ -26,7 +33,7 @@
 					class="w-full"
 					draggable="false"
 				>
-			</UCarousel>
+			</UCarousel> -->
 			<div class="w-full max-w-96 mx-auto text-center">
 				<p class="text-2xl mb-5">
 					김부민 · 박리평
@@ -255,7 +262,7 @@ useHead({
 });
 
 useSeoMeta({
-	ogImage: '/wedding/snap-2.JPG',
+	ogImage: '/wedding/snap-12.JPG',
 	ogTitle: '4월 20일 김부민 ❤️ 박리평 결혼합니다.',
 	ogDescription: '벛꽃 만개한 4월 봄날에 믿음과 사랑 안에서 새로운 시작을 준비합니다. 모든 날, 모든 순간을 아름답게 만들어가고 이끌어주고, 응원해 주는 서로가 되겠습니다.',
 });
