@@ -20,27 +20,13 @@
 				poster="/wedding/snap-12.JPG"
 			/>
 
-			<!-- <UCarousel
-				v-slot="{ item }"
-				:items="weddingPictures"
-				:ui="{ item: 'basis-full md:basis-1/2 lg:basis-1/3' }"
-				class="mb-5"
-				arrows
-				indicators
-			>
-				<img
-					:src="item"
-					class="w-full"
-					draggable="false"
-				>
-			</UCarousel> -->
 			<div class="w-full max-w-96 mx-auto text-center">
 				<p class="text-2xl mb-5">
 					김부민 · 박리평
 				</p>
 
 				<p class="mb-2">
-					2025년 4월 20일(일요일) 점심 12시 30분
+					2025년 4월 20일(일요일) 낮 12시 30분
 				</p>
 
 				<p class="">
@@ -59,10 +45,10 @@
 				>
 
 				<p class="leading-loose">
-					벛꽃 만개한 4월 봄날에 <br>
+					벚꽃 만개한 4월 봄날에 <br>
 					믿음과 사랑 안에서 새로운 시작을 준비합니다. <br>
 					모든 날, 모든 순간을 아름답게 만들어가고 <br>
-					이끌어주고, 응원해 주는 서로가 되겠습니다.
+					이끌어주고, 응원해 주는 서로 가 되겠습니다.
 				</p>
 
 				<img
@@ -106,7 +92,7 @@
 					2025.04.20
 				</h1>
 				<p class="mb-5">
-					일요일 낮(오후) 12시 30분
+					일요일 낮 12시 30분
 				</p>
 				<img
 					src="/wedding/calender.png"
@@ -244,7 +230,12 @@
 </template>
 
 <script lang="ts" setup>
+useColorMode().preference = 'light';
+
 useHead({
+	htmlAttrs: {
+		lang: 'ko',
+	},
 	title: '4월 20일 김부민 ❤️ 박리평 결혼합니다.',
 	link: [
 		{
@@ -291,11 +282,11 @@ const weddingPictures = [
 ];
 
 onMounted(() => {
+	useColorMode().preference = 'light';
 	load();
 });
 
 function load() {
-	document.documentElement.classList.remove('dark');
 	// pc: 360, mobile: 240
 	const mapWidth = window.innerWidth > 768 ? '360' : '240';
 	const mapHeight = window.innerWidth > 768 ? '240' : '160';

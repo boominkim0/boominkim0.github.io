@@ -26,10 +26,10 @@
 const links = [{
 	label: '🇰🇷 한국 결혼식',
 	badge: 'Seoul, 04/20',
-	to: '/marriage/ko',
+	to: '/marriage/kr',
 }, {
 	label: '🇨🇳 中文 婚礼',
 	badge: 'Yanji, 04/27',
-	to: '/marriage/zh',
+	to: '/marriage/cn',
 }];
 </script>

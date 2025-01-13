@@ -34,14 +34,28 @@
 					/>
 				</div>
 			</template>
-			<img
+
+			<UCarousel
+				v-slot="{ item }"
+				:items="props.pictures"
+				:ui="{ item: 'basis-full' }"
+				class="w-full h-86 rounded-lg overflow-hidden"
+				arrows
+				indicators
+			>
+				<img
+					:src="item"
+					class="w-full"
+					draggable="false"
+				>
+			</UCarousel>
+			<!-- <img
 				:src="fullImage"
 				class="w-full"
 				draggable="false"
-			>
+			> -->
 
-			<template #footer>
-				<!-- 3열로 나열 -->
+			<!-- <template #footer>
 				<div class="grid grid-cols-6 gap-2">
 					<button
 						v-for="(picture, index) in props.pictures"
@@ -55,7 +69,6 @@
 							:class="{ 'border-5 border-gray-500': picture === fullImage }"
 							draggable="false"
 						>
-						<!-- 선택된 아이콘 표시 -->
 						<UIcon
 							v-if="picture === fullImage"
 							name="i-heroicons-check-circle-solid"
@@ -67,7 +80,7 @@
 						/>
 					</button>
 				</div>
-			</template>
+			</template> -->
 		</UCard>
 	</UModal>
 </template>

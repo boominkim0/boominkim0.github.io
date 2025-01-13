@@ -80,14 +80,11 @@
 					class="w-full mb-5"
 					draggable="false"
 				>
-
 				<p class="mb-1">
-					<!-- <b>김현묵 · 이지영</b>의 장남 <b>김부민</b> -->
-					<b>金富民 · 朴丽平</b>的长女 <b>朴丽平</b>
+					<b>金贤默 · 李智英</b>的长子 <b>金富民</b>
 				</p>
 				<p class="mb-5">
-					<!-- <b>박홍권 · 홍정희</b>의 장녀 <b>박리평</b> -->
-					<b>朴丽平</b>的父母 <b>朴丽平</b>和<b>金富民</b>
+					<b>朴洪权 · 洪正姬</b>的长女 <b>朴莉平</b>
 				</p>
 			</div>
 
@@ -105,8 +102,13 @@
 </template>
 
 <script lang="ts" setup>
+useColorMode().preference = 'light';
+
 useHead({
-	title: '4月20日，金富民 ❤️ 朴丽平 结婚了。',
+	htmlAttrs: {
+		lang: 'zh-CN',
+	},
+	title: '4月27日，金富民 ❤️ 朴丽平 结婚了。',
 	link: [
 		{
 			rel: 'icon',
@@ -124,7 +126,7 @@ useHead({
 
 useSeoMeta({
 	ogImage: '/wedding/snap-2.JPG',
-	ogTitle: '4月20日，金富民 ❤️ 朴丽平 结婚了。',
+	ogTitle: '4月27日，金富民 ❤️ 朴丽平 结婚了。',
 	ogDescription: '樱花盛开的4月春天，我们在信任和爱中准备新的开始。我们将成为彼此的支持者，创造和引导每一天的美好时刻。',
 });
 const weddingPictures = [
@@ -150,5 +152,6 @@ const weddingPictures = [
 ];
 
 onMounted(() => {
+	useColorMode().preference = 'light';
 });
 </script>
