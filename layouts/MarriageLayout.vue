@@ -31,9 +31,9 @@ onMounted(() => {
 .wrapper {
 	background-color: rgb(51, 51, 51);
 
-	/deep/ * {
-		font-family: KyoboHand, serif;
-	}
+    ::v-deep * {
+        font-family: KyoboHand, serif;
+    }
 }
 .container {
 	max-width: 410px;

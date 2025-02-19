@@ -14,7 +14,7 @@
 			class="first-image"
 			draggable="false"
 		>
-		<section class="section-1 fade-in">
+		<section class="section-1">
 			<p class="text-2xl mb-5">
 				김부민 · 박리평
 			</p>
