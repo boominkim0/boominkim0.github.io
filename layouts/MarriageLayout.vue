@@ -1,35 +1,50 @@
 <template>
-	<div>
-		<UHorizontalNavigation
-			:links="links"
-			class="border-b border-gray-200 dark:border-gray-800"
-		/>
-		<slot />
-		<footer
-			class="
-            bg-gray-100 dark:bg-gray-800
-            color-gray-500 dark:color-gray-400
-            text-sm
-            py-5
-            text-center
-        "
-		>
-			<p class="mb-1">
-				© 2024 Boomin Kim
-			</p>
-			<p>bm33728090@gmail.com</p>
-		</footer>
+	<div class="wrapper">
+		<div class="container">
+			<slot />
+			<footer>
+				<p class="mb-1">
+					© 2024 Boomin Kim
+				</p>
+				<p>bm33728090@gmail.com</p>
+			</footer>
+		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-const links = [{
-	label: '🇰🇷 한국 결혼식',
-	badge: 'Seoul, 04/20',
-	to: '/marriage/kr',
-}, {
-	label: '🇨🇳 中文 婚礼',
-	badge: 'Yanji, 04/27',
-	to: '/marriage/cn',
-}];
+onMounted(() => {
+	document.body.style.backgroundColor = '#333';
+});
 </script>
+
+<style>
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+
+<style scoped>
+.wrapper {
+	background-color: rgb(51, 51, 51);
+
+	/deep/ * {
+		font-family: KyoboHand, serif;
+	}
+}
+.container {
+	max-width: 410px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+footer {
+	margin-top: 1rem;
+	text-align: center;
+	color: #333;
+	background-color: #c8c8c8;
+	padding: 1rem 0;
+}
+</style>

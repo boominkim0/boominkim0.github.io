@@ -33,7 +33,7 @@ const minutes = ref(0);
 const seconds = ref(0);
 
 const props = defineProps<{
-	date: string[]; // '2025-04-20T12:30:00';
+	date: string; // '2025-04-20T12:30:00';
 }>();
 
 // 남은 시간
