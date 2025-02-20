@@ -1,5 +1,6 @@
 <template>
 	<NuxtLayout name="marriage-layout">
+		<MarriageSakura />
 		<!-- BGM 재생 버튼 -->
 		<div
 			class="fixed top-5 right-5"
@@ -259,6 +260,14 @@ useHead({
 	script: [
 		{
 			src: 'https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js',
+			type: 'text/javascript',
+		},
+		{
+			src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js',
+			type: 'text/javascript',
+		},
+		{
+			src: 'https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js',
 			type: 'text/javascript',
 		},
 	],
