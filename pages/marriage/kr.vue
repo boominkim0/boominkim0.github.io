@@ -1,7 +1,10 @@
 <template>
 	<NuxtLayout name="marriage-layout">
 		<!-- BGM 재생 버튼 -->
-		<div class="fixed top-5 right-5">
+		<div
+			class="fixed top-5 right-5"
+			style="z-index: 1;"
+		>
 			<UButton
 				color="gray"
 				variant="solid"
@@ -315,6 +318,15 @@ onMounted(() => {
 
 	document.querySelectorAll('.fade-in').forEach((el) => {
 		observer.observe(el);
+	});
+
+	document.addEventListener('visibilitychange', () => {
+		if (document.hidden) {
+			pauseBgm();
+		}
+		else if (isBgmPlaying.value) {
+			resumeBgm();
+		}
 	});
 });
 
