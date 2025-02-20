@@ -29,7 +29,7 @@ onMounted(() => {
 
 <style scoped>
 .wrapper {
-	background-color: rgb(51, 51, 51);
+	background-color: #F8DEDE;
 
     ::v-deep * {
         font-family: KyoboHand, serif;
@@ -44,7 +44,7 @@ footer {
 	margin-top: 1rem;
 	text-align: center;
 	color: #333;
-	background-color: #c8c8c8;
+	background-color: #F0C7D1;
 	padding: 1rem 0;
 }
 </style>

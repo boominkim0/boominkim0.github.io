@@ -13,7 +13,7 @@
 			/>
 		</div>
 		<img
-			src="/wedding/snap-12.JPG"
+			src="/wedding/intro.jpeg"
 			class="first-image"
 			draggable="false"
 		>
@@ -32,7 +32,7 @@
 			</p>
 
 			<h3 class="text-2xl font-bold">
-				결혼합니다
+				결혼합니다❤️
 			</h3>
 		</section>
 
